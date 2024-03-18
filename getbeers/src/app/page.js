@@ -1,87 +1,47 @@
 "use client";
-import Image from "next/image";
-import { use, useEffect, useState } from "react";
-import axios from "axios";
-import BeerCard from "./components/beers/BeerCard";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
-  const [beers, setBeers] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const getAllBeers = async () => {
-      let allBeers = [];
-      const responseAleBeers = await axios.get(
-        "https://api.sampleapis.com/beers/ale"
-      );
-      const aleBeers = await responseAleBeers.data;
-
-      const responseStoutsBeers = await axios.get(
-        "https://api.sampleapis.com/beers/stouts"
-      );
-      const stoutsBeers = await responseStoutsBeers.data;
-
-      const newAleBeers = aleBeers.map((beer) => ({
-        ...beer,
-        category: "ale",
-      }));
-
-      const updatedAlebeers = newAleBeers.map((beer) => {
-        return {
-          ...beer,
-          beerId: beer.id,
-        };
-      });
-      const newStoutsBeers = stoutsBeers.map((beer) => ({
-        ...beer,
-        category: "stouts",
-      }));
-
-      const updatedStoutBeers = newStoutsBeers.map((beer) => {
-        return {
-          ...beer,
-          beerId: beer.id,
-        };
-      });
-
-      allBeers = [...updatedAlebeers, ...updatedStoutBeers];
-
-      const newAllBeers = allBeers.map((beer, index) => ({
-        ...beer,
-        id: index + 1,
-      }));
-
-      setBeers(newAllBeers);
-      setLoading(false);
-    };
-    getAllBeers();
-  }, []);
-
-  const test = () => {
-    console.log(beers);
+  const variants = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      },
+    },
   };
+
+  const handleAle = () => {
+
+  }
+
+  const handleStout = () => {
+
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center p-10">
-      <h1 className="text-3xl lg:text-5xl dark:text-white font-bold">
-        ALL BEERS
-      </h1>
+    <main className="flex min-h-screen flex-col items-center pt-10">
+      <h1 className="text-3xl lg:text-5xl dark:text-gray-200 font-bold">BEERS</h1>
       <div>
-        {loading ? (
-          <h1 className="text-3xl lg:text-5xl  dark:text-white">Loading...</h1>
-        ) : (
-          <div className="grid grid-cols-4">
-            {beers.map((beer) => (
-              <BeerCard
-                key={beer.id}
-                image={beer.image}
-                name={beer.name}
-                price={beer.price}
-                rating={beer.rating.average}
-                reviews={beer.rating.reviews}
-              />
-            ))}
-          </div>
-        )}
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col lg:flex-row justify-center items-center mt-52 gap-6 "
+        >
+          <Link href="/beers/ale" className="bg-lime-300 w-64 h-32 flex items-center justify-center text-white-700 text-3xl font-mono font-bold rounded-full bg-opacity-70 hover:bg-opacity-100 hover:text-gray-800">Ale Beers</Link>
+          <Link href="/beers/stout" className="bg-orange-900 w-64 h-32 flex justify-center items-center text-yellow-300 text-3xl font-mono font-bold rounded-full hover:bg-amber-200 hover:text-gray-800">Stouts Beers</Link>
+        </motion.div>
       </div>
     </main>
   );
