@@ -40,7 +40,7 @@ export default function Home() {
           className="flex flex-col lg:flex-row justify-center items-center mt-52 gap-6 "
         >
           <Link href="/beers/ale" className="bg-lime-300 w-64 h-32 flex items-center justify-center text-white-700 text-3xl font-mono font-bold rounded-full bg-opacity-70 hover:bg-opacity-100 hover:text-gray-800">Ale Beers</Link>
-          <Link href="/beers/stout" className="bg-orange-900 w-64 h-32 flex justify-center items-center text-yellow-300 text-3xl font-mono font-bold rounded-full hover:bg-amber-200 hover:text-gray-800">Stouts Beers</Link>
+          <Link href="/beers/stouts" className="bg-orange-900 w-64 h-32 flex justify-center items-center text-yellow-300 text-3xl font-mono font-bold rounded-full hover:bg-amber-200 hover:text-gray-800">Stouts Beers</Link>
         </motion.div>
       </div>
     </main>

@@ -64,6 +64,8 @@ export default function AlePage() {
             {currentBeers.map((beer) => (
               <BeerCard
                 key={beer.id}
+                id={beer.id}
+                category="ela"
                 image={beer.image}
                 name={beer.name}
                 price={beer.price}

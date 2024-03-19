@@ -1,7 +1,7 @@
 import { FaStar, FaStarHalf } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export default function BeerCard({ image, name, price, rating, reviews }) {
+export default function BeerCard({ id , category , image, name, price, rating, reviews }) {
   const [imgError, setImgError] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const stack = [];
@@ -42,12 +42,15 @@ export default function BeerCard({ image, name, price, rating, reviews }) {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
+  const handleDetailButton = () => {
+    console.log(id +' is '+category+' beer.')
+  }
 
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="container relative">
       <div
         className={`flex flex-col gap-1 items-center bg-white bg-opacity-25 rounded-lg p-2 w-60 m-3 ${
-          isHover && "opacity-10"
+          isHover && "opacity-20"
         }`}
       >
         <img
@@ -65,9 +68,10 @@ export default function BeerCard({ image, name, price, rating, reviews }) {
       </div>
       {isHover && (
       <button
-        className="static bottom-1/2 left-1/2 bg-blue-500 text-white px-4 py-2 rounded-lg"
+        className="absolute bottom-1/2 left-1/3 bg-yellow-500 text-white px-4 py-2 rounded-lg"
+        onClick={handleDetailButton}
       >
-        Click Me
+        Detail
       </button>
     )}
     </div>
