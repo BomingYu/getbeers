@@ -25,17 +25,20 @@ BEERs is a simple web application developed using ReactJS and Next.js. It provid
 ## 4. Layouts
 ### Layout Variation for Different Pages in Different Color Modes and Screen Sizes
 
-![Screenshot 1](./reportImages/beer1.jpg)
-![Screenshot 2](./reportImages/beer2.jpg)
-![Screenshot 3](./reportImages/beer3.jpg)
-![Screenshot 4](./reportImages/beer4.jpg)
-![Screenshot 5](./reportImages/beer5.jpg)
-![Screenshot 6](./reportImages/beer6.jpg)
-![Screenshot 7](./reportImages/beer7.jpg)
-![Screenshot 8](./reportImages/beer9.jpg)
-![Screenshot 9](./reportImages/beer10.jpg)
-![Screenshot 10](./reportImages/beer11.jpg)
-![Screenshot 11](./reportImages/beer12.jpg)
+<div style="display: flex; justify-content: center;">
+    <img src="./reportImages/beer1.jpg" alt="Screenshot 1" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer2.jpg" alt="Screenshot 2" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer3.jpg" alt="Screenshot 3" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer4.jpg" alt="Screenshot 4" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer5.jpg" alt="Screenshot 5" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer6.jpg" alt="Screenshot 6" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer7.jpg" alt="Screenshot 7" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer9.jpg" alt="Screenshot 8" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer10.jpg" alt="Screenshot 9" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer11.jpg" alt="Screenshot 10" width="200" style="margin-right: 10px;">
+    <img src="./reportImages/beer12.jpg" alt="Screenshot 11" width="200" style="margin-right: 10px;">
+</div>
+
 
 
 
