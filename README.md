@@ -1,7 +1,7 @@
 # BEERs
 
 ## 1. Introduction
-BEERs is a simple web application developed using ReactJS and Next.js. It provides users with information about different brands of beers, specifically Ales and Stouts, totaling 297 different brands. Users can explore basic details such as name, price, rating, etc., for each beer. The data for this application is sourced from an external API available at: https://sampleapis.com/api-list/beers
+BEERs is a simple web application developed using ReactJS and Next.js. It provides users with information about different brands of beers, specifically Ales and Stouts, totaling 297 different brands. Users can explore basic details such as name, price, rating, etc., for each beer. The data for this application is sourced from an external API available at: https://sampleapis.com/api-list/beers The detail page may be created in the future.
 
 ## 2. Features
 
@@ -38,6 +38,22 @@ BEERs is a simple web application developed using ReactJS and Next.js. It provid
     <img src="./reportImages/beer11.jpg" alt="Screenshot 10" width="200" style="margin-right: 10px;">
     <img src="./reportImages/beer12.jpg" alt="Screenshot 11" width="200" style="margin-right: 10px;">
 </div>
+
+## 5. Getting Start
+
+```bash
+# Clone the project
+git clone https://github.com/BomingYu/getbeers.git
+
+# Enter the project
+cd getbeers/getbeers
+
+# Install dependencies
+npm install
+
+# Start the project
+npm run dev
+```
 
 
 
